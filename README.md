@@ -1,5 +1,5 @@
 # Surf's Up! sqlalchemy-challenge
-![img](Resources/surgs-up.png)
+![img](Resources/surfs-up.png)
 
 ## Table of Contents
 * [Description](#description)
