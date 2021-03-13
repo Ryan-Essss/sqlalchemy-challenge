@@ -1,7 +1,7 @@
 # Surf's Up! sqlalchemy-challenge
 ![img](Resources/surfs-up.png)
 
-## Table of Contents
+## Contents
 * [Description](#description)
 * [Climate Analysis and Exploration](#climate-analysis)
 * [Precipitation Analysis](#precipitation-analysis)
