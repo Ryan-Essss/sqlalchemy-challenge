@@ -99,7 +99,7 @@ def tobs():
     for date, tobs in most_tobs:
         tobs_dict = {}
         tobs_dict['Date'] = date
-        tobs_dict['Temperature Observations'] = tobs
+        tobs_dict['Temperature (F)'] = tobs
         tobs_info.append(tobs_dict)
     return jsonify(tobs_info)
 
@@ -121,7 +121,7 @@ def solo_date(start_date):
         date_list_dict["Avg. Temp (F)"] = avg
         date_list_dict["Max Temp (F)"] = max
         date_list.append(date_list_dict) 
-    return jsonify(date_list)
+    return jsonify(date_list, f"Date Selected: {start_date}")
 
 @app.route("/api/v1.0/<start_date>/<end_date>")
 def two_dates(start_date,end_date):
@@ -141,7 +141,7 @@ def two_dates(start_date,end_date):
         two_date_dict["Avg. Temp (F)"] = avg
         two_date_dict["Max Temp (F)"] = max
         two_date_list.append(two_date_dict) 
-    return jsonify(two_date_list)
+    return jsonify(two_date_list, f"Dates Selected: {start_date} - {end_date}")
     
 
 if __name__ == '__main__':
