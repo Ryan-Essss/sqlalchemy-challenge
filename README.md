@@ -40,7 +40,7 @@ Use Flask to create routes for Precipitation, Station Information, and Temperatu
 - Python 3.7
 - Pandas
 - Jupyter Notebook
-- [Flask] (https://flask.palletsprojects.com/en/1.1.x/)
-- [SQLite] (https://www.sqlite.org/index.html)
-- [SQLAlchemy] (https://www.sqlalchemy.org)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [SQLite](https://www.sqlite.org/index.html)
+- [SQLAlchemy](https://www.sqlalchemy.org)
 
