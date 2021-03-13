@@ -33,12 +33,16 @@ def welcome():
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/start_date<br/>"
-        f"/api/v1.0/start_date/end_date<br/>"
+        f"/api/v1.0/<start><br/>"
+        f"/api/v1.0/<start>/<end><br/>"
         f"<br/>"
         f"Enter in the start_date and end_date information<br/>"
         f"Use YYYY-MM-DD for the date format"
     )
+
+#################################################
+# Flask Routes
+#################################################
 
 @app.route("/api/v1.0/precipitation")
 def precipitation():
@@ -97,6 +101,14 @@ def tobs():
         tobs_dict['Temperature Observations'] = tobs
         tobs_info.append(tobs_dict)
     return jsonify(tobs_info)
+
+@app.route("/api/v1.0/<start>")
+def solo_start(start):
+    # Create our session (link) from Python to the DB
+    session = Session(engine)
+
+    # query min/max/avg tobs from a start date
+   
 
 if __name__ == '__main__':
     app.run(debug=True)
